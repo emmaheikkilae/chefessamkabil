@@ -131,16 +131,23 @@ p { margin: 0 0 1em; color: var(--charcoal-soft); }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 9000;
+  isolation: isolate;
   background: rgba(255, 253, 249, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 84px;
+  flex-wrap: nowrap;
 }
 .brand {
   font-family: var(--font-display);
@@ -148,6 +155,7 @@ p { margin: 0 0 1em; color: var(--charcoal-soft); }
   font-weight: 600;
   color: var(--bordeaux-dark);
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 .brand span { color: var(--brass); }
 
@@ -187,6 +195,7 @@ p { margin: 0 0 1em; color: var(--charcoal-soft); }
   border: none;
   cursor: pointer;
   padding: 6px;
+  z-index: 200;
 }
 .nav-toggle span {
   width: 24px; height: 2px;
@@ -194,20 +203,34 @@ p { margin: 0 0 1em; color: var(--charcoal-soft); }
   border-radius: 2px;
 }
 
-@media (max-width: 860px) {
+/* Below 1024px there isn't comfortable room for 6 links + a name + a
+   button on one line, so we switch to the hamburger earlier than a
+   typical "phone-only" breakpoint. This covers narrowed laptop windows,
+   tablets, and phones alike. */
+@media (max-width: 1024px) {
   .nav-links {
     position: fixed;
-    inset: 84px 0 0 0;
-    background: var(--cream);
+    top: 84px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100vh - 84px);
+    margin: 0;
+    background-color: var(--cream);
+    opacity: 1;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
     padding: 40px 24px;
     gap: 26px;
     transform: translateY(-110%);
     transition: transform 0.28s ease;
+    z-index: 9999;
+    overflow-y: auto;
   }
   .nav-links.open { transform: translateY(0); }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; position: relative; z-index: 10000; }
   .nav-cta { margin-left: 0; }
 }
 
