@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Chef Essam Kabil — Contact &amp; Booking</title>
+<meta name="description" content="Request catering, a private chef, or cooking lessons with Chef Essam Kabil in Jacksonville, FL. Tell him about your event and he'll respond within 24-48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="brand">Essam <span>Kabil</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Book Chef Essam</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:40px;">
+  <div class="container hero-inner" style="padding-bottom:60px;">
+    <span class="eyebrow">Contact &amp; Booking</span>
+    <h1>Let's plan your menu</h1>
+    <p class="lede">Fill in as much detail as you can — the more Essam knows, the sharper his first proposal will be. He personally reviews every inquiry and typically responds within 24–48 hours.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:820px;">
+
+    <div class="form-card">
+      <!--
+        NOTE FOR DEPLOYMENT ON NETLIFY:
+        To have this form actually email submissions, add Netlify Forms
+        attributes to the <form> tag below:
+
+          <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+        and add a hidden input: <input type="hidden" name="form-name" value="booking">
+
+        Then remove the "data-demo-form" attribute (or leave it — see README
+        for how the two can work together). Full instructions are in README.md.
+      -->
+      <form data-demo-form data-confirm-target="#booking-confirm">
+        <div class="form-grid">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="field">
+            <label>Phone <span class="optional">(optional)</span></label>
+            <input type="tel" name="phone">
+          </div>
+          <div class="field">
+            <label>Service Requested</label>
+            <select name="service" required>
+              <option value="">Select a service</option>
+              <option value="catering">Catering</option>
+              <option value="lesson">Cooking Lesson</option>
+              <option value="private-chef">Private Chef</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Event Start Date</label>
+            <input type="date" name="event_start_date" required>
+          </div>
+          <div class="field">
+            <label>Event End Date <span class="optional">(leave blank for a single-day event)</span></label>
+            <input type="date" name="event_end_date">
+          </div>
+          <div class="field">
+            <label>Location <span class="optional">(city / venue)</span></label>
+            <input type="text" name="location" required>
+          </div>
+          <div class="field">
+            <label>Number of Guests</label>
+            <input type="number" name="guests" min="1" required>
+          </div>
+          <div class="field">
+            <label>Occasion Type <span class="optional">(optional)</span></label>
+            <select name="occasion" id="occasion-select">
+              <option value="">Select one</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Wedding</option>
+              <option>Corporate Event</option>
+              <option>Intimate Dinner</option>
+              <option>Workshop</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field full" id="occasion-other-wrap" style="display:none;">
+            <label>Please specify the occasion</label>
+            <input type="text" name="occasion_other" placeholder="Tell us more about the occasion">
+          </div>
+          <div class="field full">
+            <label>Preferred Cuisine or Theme <span class="optional">(optional)</span></label>
+            <input type="text" name="theme" placeholder="e.g. French bistro, Mediterranean, Egyptian-French fusion">
+          </div>
+          <div class="field full">
+            <label>Dietary Restrictions or Preferences <span class="optional">(optional)</span></label>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="dietary" value="vegetarian"> Vegetarian</label>
+              <label><input type="checkbox" name="dietary" value="vegan"> Vegan</label>
+              <label><input type="checkbox" name="dietary" value="halal"> Halal</label>
+              <label><input type="checkbox" name="dietary" value="gluten-free"> Gluten-Free</label>
+              <label><input type="checkbox" name="dietary" value="allergies"> Allergies</label>
+              <label><input type="checkbox" name="dietary" value="other" id="dietary-other-check"> Other</label>
+            </div>
+          </div>
+          <div class="field full" id="dietary-other-wrap" style="display:none;">
+            <label>Please describe the dietary need</label>
+            <input type="text" name="dietary_other" placeholder="e.g. shellfish allergy, low-sodium, keto">
+          </div>
+          <div class="field full">
+            <label>Budget Range <span class="optional">(optional)</span></label>
+            <select name="budget">
+              <option value="">Prefer not to say / let's discuss</option>
+              <option>$ — Modest</option>
+              <option>$$ — Moderate</option>
+              <option>$$$ — Premium</option>
+              <option>$$$$ — Luxury</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label>Additional Details / Your Vision <span class="optional">(optional)</span></label>
+            <textarea name="details" rows="5" placeholder="Tell Essam about the occasion, style, and anything else that would help him plan."></textarea>
+          </div>
+          <div class="field full">
+            <label>Upload Files <span class="optional">(optional — sample menus, inspiration photos, etc.)</span></label>
+            <input type="file" name="attachment" multiple>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mt-lg">Send Request</button>
+      </form>
+
+      <div id="booking-confirm" class="confirm-box">
+        <h3>Thank you — your request is in Chef Essam's hands.</h3>
+        <p>He personally reviews every inquiry and typically responds within 24–48 hours with initial ideas and availability. In the meantime, feel free to browse the <a href="gallery.html" style="color:var(--bordeaux); font-weight:600;">Gallery</a> or read more <a href="testimonials.html" style="color:var(--bordeaux); font-weight:600;">Testimonials</a>.</p>
+      </div>
+    </div>
+
+    <div class="center mt-lg" style="font-size:0.9rem; color:var(--charcoal-soft);">
+      <p>Prefer email directly? Reach Essam at <a href="mailto:essamkabil@yahoo.com" style="color:var(--bordeaux); font-weight:600;">essamkabil@yahoo.com</a> · Based in Jacksonville, Florida, USA</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Essam Kabil</div>
+        <p>French-trained chef, caterer, and cooking instructor based in Jacksonville, Florida — bringing five-star technique and Mediterranean warmth to your table.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:essamkabil@yahoo.com">essamkabil@yahoo.com</a></li>
+          <li>Jacksonville, Florida</li>
+          <li><a href="contact.html">Book Chef Essam →</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100069899911060" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/REPLACE_WITH_HANDLE" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Chef Essam Kabil. All rights reserved.</span>
+      <span>Swap in your own photography anytime — see README.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

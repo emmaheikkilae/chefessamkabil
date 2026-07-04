@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Chef Essam Kabil</title>
+<meta name="description" content="A look at Chef Essam Kabil's dishes, events, and cooking classes — French classics, Mediterranean favorites, and behind-the-scenes moments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="index.html" class="brand">Essam <span>Kabil</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Book Chef Essam</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:40px;">
+  <div class="container hero-inner" style="padding-bottom:60px;">
+    <span class="eyebrow">Gallery</span>
+    <h1>A taste of the table</h1>
+    <p class="lede">Dishes, events, and moments from Chef Essam's kitchen. Photos are on their way — this page is ready to receive them.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="french">French Classics</button>
+      <button class="filter-tab" data-filter="mediterranean">Mediterranean &amp; Middle Eastern</button>
+      <button class="filter-tab" data-filter="events">Private Events &amp; Celebrations</button>
+      <button class="filter-tab" data-filter="classes">Cooking Classes</button>
+      <button class="filter-tab" data-filter="behind">Behind the Pass</button>
+    </div>
+
+    <div class="masonry">
+      <div class="g-item show" data-category="french">
+        <div class="g-photo"><span class="g-icon">🥐</span><span class="g-hint">images/french-01.jpg</span></div>
+        <p class="g-caption"><strong>Coq au vin</strong> — a Sunday-dinner classic from his C.R.E.T. training.</p>
+      </div>
+      <div class="g-item show" data-category="mediterranean">
+        <div class="g-photo"><span class="g-icon">🫒</span><span class="g-hint">images/med-01.jpg</span></div>
+        <p class="g-caption"><strong>Mezze spread</strong> — grilled vegetables, herb dips, warm bread.</p>
+      </div>
+      <div class="g-item show" data-category="events">
+        <div class="g-photo"><span class="g-icon">🥂</span><span class="g-hint">images/event-01.jpg</span></div>
+        <p class="g-caption"><strong>Private anniversary dinner</strong>, plated tableside.</p>
+      </div>
+      <div class="g-item show" data-category="classes">
+        <div class="g-photo"><span class="g-icon">🥞</span><span class="g-hint">images/class-01.jpg</span></div>
+        <p class="g-caption"><strong>Crêpe-making class</strong> in progress.</p>
+      </div>
+      <div class="g-item show" data-category="behind">
+        <div class="g-photo"><span class="g-icon">🔥</span><span class="g-hint">images/behind-01.jpg</span></div>
+        <p class="g-caption"><strong>Behind the pass</strong> — Essam finishing a sauce.</p>
+      </div>
+      <div class="g-item show" data-category="french">
+        <div class="g-photo"><span class="g-icon">🍷</span><span class="g-hint">images/french-02.jpg</span></div>
+        <p class="g-caption"><strong>Wine pairing</strong> — a skill from his French wine studies.</p>
+      </div>
+      <div class="g-item show" data-category="mediterranean">
+        <div class="g-photo"><span class="g-icon">🐟</span><span class="g-hint">images/med-02.jpg</span></div>
+        <p class="g-caption"><strong>Grilled Mediterranean fish</strong>, herb-forward plating.</p>
+      </div>
+      <div class="g-item show" data-category="events">
+        <div class="g-photo"><span class="g-icon">🎉</span><span class="g-hint">images/event-02.jpg</span></div>
+        <p class="g-caption"><strong>Corporate holiday catering</strong> — 40 guests served.</p>
+      </div>
+      <div class="g-item show" data-category="classes">
+        <div class="g-photo"><span class="g-icon">🧂</span><span class="g-hint">images/class-02.jpg</span></div>
+        <p class="g-caption"><strong>Classic French mother sauces</strong> workshop.</p>
+      </div>
+      <div class="g-item show" data-category="behind">
+        <div class="g-photo"><span class="g-icon">👨‍🍳</span><span class="g-hint">images/behind-02.jpg</span></div>
+        <p class="g-caption"><strong>Essam with guests</strong> after service.</p>
+      </div>
+      <div class="g-item show" data-category="french">
+        <div class="g-photo"><span class="g-icon">🍮</span><span class="g-hint">images/french-03.jpg</span></div>
+        <p class="g-caption"><strong>Tarte tatin</strong> — finished tableside.</p>
+      </div>
+      <div class="g-item show" data-category="mediterranean">
+        <div class="g-photo"><span class="g-icon">🥙</span><span class="g-hint">images/med-03.jpg</span></div>
+        <p class="g-caption"><strong>Egyptian-inspired mezze</strong> plate.</p>
+      </div>
+    </div>
+
+    <p class="center" style="margin-top:36px; font-size:0.85rem; color:var(--charcoal-soft);">
+      Each placeholder above marks exactly where a photo will go — see the <code>images/</code> folder and README for how to swap them in.
+    </p>
+  </div>
+</section>
+
+<section class="section section--ivory">
+  <div class="container">
+    <div class="center" style="max-width:600px; margin:0 auto 40px;">
+      <span class="eyebrow">Follow Along</span>
+      <h2>Latest from Instagram</h2>
+      <p>A live feed of Essam's most recent posts — plugged in once his Instagram handle is connected below.</p>
+    </div>
+
+    <!--
+      INSTAGRAM FEED — placeholder grid.
+      To show real, live Instagram posts here, the simplest no-code option is
+      a free embed widget (since Instagram's own API requires a developer app):
+        1. Sign up at https://snapwidget.com or https://elfsight.com (both have free tiers)
+        2. Connect Essam's Instagram account and choose a grid layout
+        3. Paste the <iframe> or <script> snippet they give you in place of
+           the six placeholder tiles below
+      See README.md for the full walkthrough.
+    -->
+    <div class="masonry ig-grid">
+      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
+      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
+      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
+      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
+      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
+      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
+    </div>
+    <p class="center mt-lg">
+      <a href="https://www.instagram.com/REPLACE_WITH_HANDLE" target="_blank" rel="noopener" class="btn btn-outline on-light">View More on Instagram</a>
+    </p>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Like what you see in your mind's eye already?</h2>
+    <p>Let's put it on your table.</p>
+    <a href="contact.html" class="btn btn-outline on-light" style="background:var(--charcoal); color:var(--ivory); border-color:var(--charcoal);">Book Chef Essam</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Essam Kabil</div>
+        <p>French-trained chef, caterer, and cooking instructor based in Jacksonville, Florida — bringing five-star technique and Mediterranean warmth to your table.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:essamkabil@yahoo.com">essamkabil@yahoo.com</a></li>
+          <li>Jacksonville, Florida</li>
+          <li><a href="contact.html">Book Chef Essam →</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100069899911060" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/REPLACE_WITH_HANDLE" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Chef Essam Kabil. All rights reserved.</span>
+      <span>Swap in your own photography anytime — see README.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
