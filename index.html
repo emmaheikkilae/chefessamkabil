@@ -87,6 +87,7 @@
     </div>
     <div class="g-photo">
       <img src="images/essam-home.jpg" alt="Chef Essam Kabil slicing vegetables at a home kitchen island">
+    </div>
   </div>
 </section>
 
@@ -108,23 +109,7 @@
       <span class="eyebrow">What Clients Say</span>
       <h2>Trusted for the moments that matter</h2>
     </div>
-    <div class="grid-3">
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Chef Essam did our anniversary dinner at home and it was better than any restaurant we've been to."</p>
-        <div class="t-meta">Marie T. — Private Dinner</div>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"He made crêpe-making feel effortless. Best girls' night we've had in years."</p>
-        <div class="t-meta">Danielle R. — Cooking Lesson</div>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"40 guests, dietary needs all over the map — he handled it without a single complaint."</p>
-        <div class="t-meta">James K. — Catering</div>
-      </div>
-    </div>
+    <div class="grid-3" id="home-testimonial-grid"></div>
     <p class="center mt-lg"><a href="testimonials.html" class="btn btn-outline on-light">Read More Stories</a></p>
   </div>
 </section>
@@ -170,6 +155,14 @@
     </div>
   </div>
 </footer>
+<script src="js/testimonials-data.js"></script>
+<script>
+  mountTestimonials({
+    gridEl: document.getElementById("home-testimonial-grid"),
+    onHomeOnly: true,
+    limit: 3
+  });
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

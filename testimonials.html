@@ -38,31 +38,12 @@
 <section class="section">
   <div class="container" style="max-width:900px;">
 
-    <div class="t-featured">
-      <div class="stars">★★★★★</div>
-      <p class="quote">"Chef Essam did our anniversary dinner at home and it was better than any restaurant we've been to. The French sauces alone were worth it."</p>
-      <div class="t-meta">Marie T. — Private Dinner</div>
-    </div>
+    <div id="featured-testimonial"></div>
 
-    <div class="grid-3">
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"We booked him for a cooking class with six friends and it turned into the best girls' night we've had in years. He made crêpe-making feel effortless."</p>
-        <div class="t-meta">Danielle R. — Cooking Lesson</div>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Corporate holiday party, 40 guests, dietary needs all over the map — he handled it without a single complaint. Professional and warm."</p>
-        <div class="t-meta">James K. — Catering</div>
-      </div>
-      <div class="t-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"A private chef who actually listens to what you want. Our weekly dinners have never been better."</p>
-        <div class="t-meta">Sophia L. — Private Chef</div>
-      </div>
-    </div>
+    <div class="grid-3" id="testimonial-grid"></div>
   </div>
 </section>
+
 
 <section class="section section--ivory">
   <div class="container" style="max-width:700px;">
@@ -156,6 +137,14 @@
     </div>
   </div>
 </footer>
+<script src="js/testimonials-data.js"></script>
+<script>
+  mountTestimonials({
+    featuredEl: document.getElementById("featured-testimonial"),
+    gridEl: document.getElementById("testimonial-grid"),
+    excludeFeatured: true
+  });
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
