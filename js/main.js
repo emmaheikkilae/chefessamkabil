@@ -46,18 +46,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Booking / testimonial form submission (client-side placeholder)
-  // NOTE: This demo intercepts submit and shows a confirmation message.
-  // To actually receive submissions by email, replace the <form> action
-  // with a form backend such as Netlify Forms (see README) or Formspree.
-  document.querySelectorAll("form[data-demo-form]").forEach(function (form) {
+  // Submit forms to Netlify Forms via AJAX, so we can show an in-page
+  // confirmation instead of navigating to a new page.
+  document.querySelectorAll("form[data-ajax-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
-      // If Netlify Forms attributes are present and the site is deployed on
-      // Netlify, let the form submit normally (remove this block in that case).
       e.preventDefault();
-      var confirmBox = document.querySelector(form.getAttribute("data-confirm-target"));
-      form.style.display = "none";
-      if (confirmBox) confirmBox.classList.add("show");
+      var submitBtn = form.querySelector("button[type=submit]");
+      var originalBtnText = submitBtn ? submitBtn.textContent : "";
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending..."; }
+
+      var formData = new FormData(form);
+      fetch("/", {
+        method: "POST",
+        body: formData
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Network response was not ok");
+          var confirmBox = document.querySelector(form.getAttribute("data-confirm-target"));
+          form.style.display = "none";
+          if (confirmBox) confirmBox.classList.add("show");
+        })
+        .catch(function () {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Something went wrong — please try again"; }
+          setTimeout(function () {
+            if (submitBtn) { submitBtn.textContent = originalBtnText; }
+          }, 3000);
+        });
     });
   });
 });
