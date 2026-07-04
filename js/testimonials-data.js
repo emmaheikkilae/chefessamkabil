@@ -46,11 +46,11 @@ window.TESTIMONIALS = [
   {
     id: "t4",
     stars: 5,
-    quote: "A private chef who actually listens to what you want. Our weekly dinners have never been better.",
-    name: "Sophia L.",
+    quote: "Essam made the entire private chef experience feel effortless and special. From the start, the menu felt thoughtful and personalized, especially for a French bistro–style celebration for four guests. The meal was beautifully prepared, the chocolate mousse was a standout, and every detail reflected real care and professionalism. It was the perfect way to celebrate a new job and create a memorable evening at home.",
+    name: "Essam O.",
     eventType: "Private Chef",
     featured: false,
-    showOnHome: false
+    showOnHome: true
   }
 ];
 
