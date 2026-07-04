@@ -51,6 +51,38 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("form[data-ajax-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      // Build a real, populated email subject line from the actual field
+      // values (Netlify's dashboard subject field can't reference submitted
+      // data directly — a hidden "subject" input in the form is the only
+      // way to make the subject line dynamic).
+      var subjectField = form.querySelector('input[name="subject"]');
+      if (subjectField) {
+        var formName = form.getAttribute("name");
+        if (formName === "booking") {
+          var bName = (form.elements["name"] || {}).value || "someone";
+          var bGuests = (form.elements["guests"] || {}).value || "?";
+          var bStart = (form.elements["event_start_date"] || {}).value || "";
+          var bEnd = (form.elements["event_end_date"] || {}).value || "";
+          var bDates = bEnd ? (bStart + "\u2013" + bEnd) : bStart;
+          var bServiceEl = form.elements["service"];
+          var bService = bServiceEl && bServiceEl.selectedIndex > -1
+            ? bServiceEl.options[bServiceEl.selectedIndex].text
+            : "";
+          subjectField.value = "\uD83D\uDCC5 New Booking from " + bName + " for " + bGuests + " guests, " + bDates + " \u2014 " + bService;
+        } else if (formName === "testimonial") {
+          var tName = (form.elements["name"] || {}).value || "someone";
+          var tTypeEl = form.elements["event_type"];
+          var tType = tTypeEl && tTypeEl.selectedIndex > -1
+            ? tTypeEl.options[tTypeEl.selectedIndex].text
+            : "";
+          var tRatingEl = form.elements["rating"];
+          var tRating = tRatingEl && tRatingEl.selectedIndex > -1
+            ? tRatingEl.options[tRatingEl.selectedIndex].text
+            : "";
+          subjectField.value = "\u2B50 New Testimonial from " + tName + " \u2014 " + tType + " \u2014 " + tRating;
+        }
+      }
+
       var submitBtn = form.querySelector("button[type=submit]");
       var originalBtnText = submitBtn ? submitBtn.textContent : "";
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending..."; }
