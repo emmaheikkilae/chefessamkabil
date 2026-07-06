@@ -294,6 +294,14 @@ html, body {
 }
 @media (max-width: 780px) { .grid-3 { grid-template-columns: 1fr; } }
 
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 980px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid-4 { grid-template-columns: 1fr; } }
+
 .icon-card {
   background: var(--cream);
   border: 1px solid var(--line);
