@@ -534,31 +534,31 @@ html, body {
    How It Works (Contact page)
    ============================================ */
 .process-vertical {
-  position: relative;
   max-width: 620px;
   margin: 0 auto;
-  padding-left: 8px;
-}
-.process-vertical::before {
-  content: "";
-  position: absolute;
-  left: 34px;
-  top: 30px;
-  bottom: 30px;
-  width: 0;
-  border-left: 2px dotted var(--brass);
 }
 .process-step {
   position: relative;
   display: flex;
+  align-items: flex-start;
   gap: 26px;
-  padding-bottom: 40px;
+  padding-bottom: 44px;
 }
 .process-step:last-child { padding-bottom: 0; }
+.process-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 29px;
+  top: 60px;
+  height: 44px;
+  border-left: 2px dotted var(--brass);
+  z-index: 0;
+}
 .process-number {
   position: relative;
   z-index: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
   width: 60px; height: 60px;
   border-radius: 50%;
   background: var(--ivory);
@@ -569,9 +569,11 @@ html, body {
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 600;
+  line-height: 1;
   color: var(--bordeaux);
+  text-align: center;
 }
-.process-content { padding-top: 8px; }
+.process-content { padding-top: 12px; }
 .process-content .step-title {
   font-family: var(--font-display);
   font-weight: 600;
