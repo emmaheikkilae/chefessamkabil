@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Dream Avenue";
+  src: url("fonts/DreamAvenue-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ============================================
    Chef Essam Kabil — Design Tokens
    ============================================ */
@@ -13,7 +21,7 @@
   --charcoal-soft: #4A4E5C;
   --line: rgba(43, 46, 56, 0.12);
 
-  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-display: "Dream Avenue", "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;
 
   --max-width: 1180px;
@@ -156,7 +164,11 @@ html, body {
   color: var(--bordeaux-dark);
   letter-spacing: 0.01em;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+.brand-mark { width: 34px; height: 34px; object-fit: contain; display: block; }
 .brand span { color: var(--brass); }
 
 .nav-links {
@@ -620,7 +632,8 @@ html, body {
 .footer-grid h4 { color: var(--ivory); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 14px; font-family: var(--font-body); }
 .footer-grid ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .footer-grid a:hover { color: var(--brass-light); }
-.footer-brand { font-family: var(--font-display); font-size: 1.3rem; color: var(--ivory); margin-bottom: 10px; }
+.footer-brand { font-family: var(--font-display); font-size: 1.3rem; color: var(--ivory); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.footer-mark { width: 30px; height: 30px; object-fit: contain; display: block; }
 .footer-bottom {
   border-top: 1px solid rgba(247,241,232,0.12);
   padding-top: 22px;
