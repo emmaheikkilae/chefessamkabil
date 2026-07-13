@@ -159,8 +159,9 @@ html, body {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
-.brand-mark { width: 46px; height: 46px; object-fit: contain; display: block; }
+.brand-mark { width: 60px; height: 60px; object-fit: contain; display: block; flex-shrink: 0; }
 .brand span span { color: var(--brass); }
 
 .nav-links {
@@ -207,11 +208,11 @@ html, body {
   border-radius: 2px;
 }
 
-/* Below 1024px there isn't comfortable room for 6 links + a name + a
+/* Below 1140px there isn't comfortable room for 7 links + a name + a
    button on one line, so we switch to the hamburger earlier than a
    typical "phone-only" breakpoint. This covers narrowed laptop windows,
    tablets, and phones alike. */
-@media (max-width: 1024px) {
+@media (max-width: 1140px) {
   .nav-links {
     position: fixed;
     top: 84px;
@@ -778,7 +779,7 @@ html, body {
 .footer-grid ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .footer-grid a:hover { color: var(--brass-light); }
 .footer-brand { font-family: var(--font-display); font-size: 1.7rem; color: var(--ivory); margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
-.footer-mark { width: 42px; height: 42px; object-fit: contain; display: block; }
+.footer-mark { width: 56px; height: 56px; object-fit: contain; display: block; flex-shrink: 0; }
 .footer-bottom {
   border-top: 1px solid rgba(247,241,232,0.12);
   padding-top: 22px;
