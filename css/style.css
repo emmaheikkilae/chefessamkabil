@@ -588,6 +588,38 @@ html, body {
 }
 
 /* ============================================
+   Dish Breakdown (Menus page)
+   ============================================ */
+.dish-block:not(:last-child) {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 56px;
+  margin-bottom: 56px;
+}
+.dish-menu-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 10px;
+  display: block;
+}
+.dish-prep-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bordeaux);
+  margin: 22px 0 8px;
+  display: block;
+}
+.dish-prep-text {
+  font-size: 0.95rem;
+  color: var(--charcoal-soft);
+  line-height: 1.7;
+}
+
+/* ============================================
    Forms
    ============================================ */
 .form-card {
