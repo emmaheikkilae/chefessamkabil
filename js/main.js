@@ -46,6 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Show the relevant follow-up question based on which service is selected:
+  // Private Chef -> who provides ingredients; Multi-Day Meal Prep -> location/containers
+  var serviceSelect = document.getElementById("service-select");
+  var ingredientsWrap = document.getElementById("ingredients-wrap");
+  var mealprepWrap = document.getElementById("mealprep-wrap");
+  if (serviceSelect && ingredientsWrap && mealprepWrap) {
+    serviceSelect.addEventListener("change", function () {
+      ingredientsWrap.style.display = serviceSelect.value === "private-chef" ? "block" : "none";
+      mealprepWrap.style.display = serviceSelect.value === "meal-prep" ? "block" : "none";
+    });
+  }
+
   // Submit forms to Netlify Forms via AJAX, so we can show an in-page
   // confirmation instead of navigating to a new page.
   document.querySelectorAll("form[data-ajax-form]").forEach(function (form) {

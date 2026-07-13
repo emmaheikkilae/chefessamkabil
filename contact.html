@@ -36,11 +36,12 @@
   </div>
 </section>
 
-<section class="section--tight section--ivory">
+<section class="section section--bordeaux">
   <div class="container">
-    <div class="center" style="max-width:640px; margin:0 auto 16px;">
+    <div class="center" style="max-width:600px; margin:0 auto 56px;">
       <span class="eyebrow">How It Works</span>
       <h2>From First Message to the Final Bite</h2>
+      <div style="width:60px; height:1px; background:var(--brass-light); margin:20px auto 0;"></div>
     </div>
     <div class="steps-grid">
       <div class="step-item">
@@ -55,23 +56,23 @@
       </div>
       <div class="step-item">
         <div class="step-number">3</div>
-        <div class="step-title">Menu Planning</div>
-        <p class="step-desc">For larger events, an optional consultation helps shape the menu together.</p>
+        <div class="step-title">Menu Planning &amp; Consultation</div>
+        <p class="step-desc">Every booking includes talking through the menu, ingredients, and vision together — his insight helps make it the best it can be.</p>
       </div>
       <div class="step-item">
         <div class="step-number">4</div>
         <div class="step-title">Confirm &amp; Reserve</div>
-        <p class="step-desc">Pricing and details are discussed directly with you, and a deposit secures your date.</p>
+        <p class="step-desc">Pricing, ingredients, and every detail are discussed directly with you, and a deposit secures your date.</p>
       </div>
       <div class="step-item">
         <div class="step-number">5</div>
         <div class="step-title">The Big Day</div>
-        <p class="step-desc">Essam shops, cooks, and serves — in your kitchen or his.</p>
+        <p class="step-desc">Essam cooks and serves — in your kitchen or his, exactly as arranged.</p>
       </div>
       <div class="step-item">
         <div class="step-number">6</div>
         <div class="step-title">Final Payment</div>
-        <p class="step-desc">The remaining balance is settled on the day of service.</p>
+        <p class="step-desc">The remaining balance is settled on the day of service (or the final day, for multi-day bookings) — or shortly after.</p>
       </div>
       <div class="step-item">
         <div class="step-number">7</div>
@@ -105,7 +106,7 @@
           </div>
           <div class="field">
             <label>Service Requested</label>
-            <select name="service" required>
+            <select name="service" id="service-select" required>
               <option value="">Select a service</option>
               <option value="catering">Catering</option>
               <option value="lesson">Cooking Lesson</option>
@@ -164,6 +165,23 @@
           <div class="field full" id="dietary-other-wrap" style="display:none;">
             <label>Please describe the dietary need</label>
             <input type="text" name="dietary_other" placeholder="e.g. shellfish allergy, low-sodium, keto">
+          </div>
+          <div class="field full" id="ingredients-wrap" style="display:none;">
+            <label>Who Will Provide the Ingredients?</label>
+            <select name="ingredients_provider">
+              <option value="">Select one</option>
+              <option value="customer">I'll purchase the ingredients myself</option>
+              <option value="essam">Essam will purchase the ingredients</option>
+            </select>
+          </div>
+          <div class="field full" id="mealprep-wrap" style="display:none;">
+            <label>Meal Prep Location &amp; Containers</label>
+            <select name="mealprep_option">
+              <option value="">Select one</option>
+              <option value="customer-home-own-containers">At my home — I'll provide the containers</option>
+              <option value="customer-home-essam-trays">At my home — Essam will bring aluminum trays</option>
+              <option value="essam-kitchen-delivered">At Essam's kitchen — delivered to me in aluminum trays</option>
+            </select>
           </div>
           <div class="field full">
             <label>Budget Range <span class="optional">(optional)</span></label>
