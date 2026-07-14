@@ -118,4 +118,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   });
+
+  // Facebook widget fallback: if it hasn't rendered (e.g. blocked by an ad
+  // blocker or privacy extension) within a few seconds, swap it for a plain link.
+  var fbPageEl = document.getElementById("fb-page-el");
+  var fbFallback = document.getElementById("fb-fallback");
+  if (fbPageEl && fbFallback) {
+    setTimeout(function () {
+      var loaded = fbPageEl.querySelector("iframe");
+      if (!loaded) {
+        fbPageEl.style.display = "none";
+        fbFallback.style.display = "block";
+      }
+    }, 4000);
+  }
 });

@@ -155,8 +155,8 @@
       of recent posts, not an arrow-based slider (Facebook doesn't offer that
       format for free) — but it's a genuine live connection to the Page.
     -->
-    <div class="center">
-      <div class="fb-page"
+    <div class="center" id="fb-widget-wrap">
+      <div class="fb-page" id="fb-page-el"
            data-href="https://www.facebook.com/profile.php?id=100069899911060"
            data-tabs="timeline"
            data-width="500"
@@ -168,6 +168,10 @@
         <blockquote cite="https://www.facebook.com/profile.php?id=100069899911060" class="fb-xfbml-parse-ignore">
           <a href="https://www.facebook.com/profile.php?id=100069899911060">Essam Kabil</a>
         </blockquote>
+      </div>
+      <div id="fb-fallback" style="display:none;">
+        <p style="color:var(--charcoal-soft); margin-bottom:16px;">The live feed didn't load — this can happen with ad blockers or privacy extensions.</p>
+        <a href="https://www.facebook.com/profile.php?id=100069899911060" target="_blank" rel="noopener" class="btn btn-outline on-light">Visit Essam's Facebook Page</a>
       </div>
     </div>
   </div>
