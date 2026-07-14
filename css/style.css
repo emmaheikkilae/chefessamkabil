@@ -133,12 +133,10 @@ p { margin: 0 0 1em; color: var(--charcoal-soft); }
   top: 0;
   z-index: 9000;
   isolation: isolate;
-  background: rgba(255, 253, 249, 0.94);
-  backdrop-filter: blur(6px);
+  background: var(--cream);
   border-bottom: 1px solid var(--line);
 }
 html, body {
-  overflow-x: hidden;
   max-width: 100%;
 }
 
