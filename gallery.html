@@ -5,7 +5,7 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery — Chef Essam Kabil</title>
-<meta name="description" content="A look at Chef Essam Kabil's dishes, events, and cooking classes — French classics, Mediterranean favorites, and behind-the-scenes moments.">
+<meta name="description" content="A look at Chef Essam Kabil's dishes and events — Mediterranean and Middle Eastern favorites, private event catering, and behind-the-scenes moments from the kitchen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -33,7 +33,7 @@
   <div class="container hero-inner" style="padding-bottom:60px;">
     <span class="eyebrow">Gallery</span>
     <h1>A taste of the table</h1>
-    <p class="lede">Dishes, events, and moments from Chef Essam's kitchen. Photos are on their way — this page is ready to receive them.</p>
+    <p class="lede">Dishes, events, and moments from Chef Essam's kitchen.</p>
   </div>
 </section>
 
@@ -43,6 +43,7 @@
       <button class="filter-tab active" data-filter="all">All</button>
       <button class="filter-tab" data-filter="french">French Classics</button>
       <button class="filter-tab" data-filter="mediterranean">Mediterranean &amp; Middle Eastern</button>
+      <button class="filter-tab" data-filter="dinners">Private Chef Dinners</button>
       <button class="filter-tab" data-filter="events">Private Events &amp; Celebrations</button>
       <button class="filter-tab" data-filter="classes">Cooking Classes</button>
       <button class="filter-tab" data-filter="behind">Behind the Pass</button>
@@ -50,67 +51,202 @@
 
     <div class="masonry">
       <div class="g-item show" data-category="french">
-        <div class="g-photo"><span class="g-icon">🥐</span><span class="g-hint">images/french-01.jpg</span></div>
-        <p class="g-caption"><strong>Coq au vin</strong> — a Sunday-dinner classic from his C.R.E.T. training.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-lamb-chops-with-ratatouille.webp" type="image/webp">
+          <img src="images/dishes/dish-lamb-chops-with-ratatouille.jpg" width="717" height="538" loading="lazy" decoding="async" alt="Rack of lamb chops plated against a ratatouille-stuffed roasted butternut squash on curry coconut sauce">
+        </picture></div>
+        <p class="g-caption"><strong>Lamb chops with ratatouille</strong> — Stuffed into roasted butternut squash, on curry coconut sauce.</p>
       </div>
       <div class="g-item show" data-category="mediterranean">
         <div class="g-photo"><picture>
           <source srcset="images/catering/catering-bread-and-meatballs.webp" type="image/webp">
           <img src="images/catering/catering-bread-and-meatballs.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Platter of golden falafel with tahini dip beside a tray of tomato and basil bruschetta topped with shaved parmesan">
         </picture></div>
-        <p class="g-caption"><strong>Falafel &amp; bruschetta</strong> — passed hors d'oeuvres with tahini and shaved parmesan.</p>
+        <p class="g-caption"><strong>Falafel &amp; bruschetta</strong> — Passed hors d'oeuvres with tahini and shaved parmesan.</p>
+      </div>
+      <div class="g-item show" data-category="dinners">
+        <div class="g-photo"><picture>
+          <source srcset="images/private-chef/private-chef-lobster-tail.webp" type="image/webp">
+          <img src="images/private-chef/private-chef-lobster-tail.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Surf and turf plate of butter-poached lobster tail and grilled beef medallion with green beans and drawn butter">
+        </picture></div>
+        <p class="g-caption"><strong>Surf and turf</strong> — Butter-poached lobster tail and grilled beef medallion.</p>
       </div>
       <div class="g-item show" data-category="events">
         <div class="g-photo"><picture>
           <source srcset="images/catering/catering-vegetables.webp" type="image/webp">
           <img src="images/catering/catering-vegetables.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Crudite platter arranged with broccoli, asparagus, heirloom cherry tomatoes, radishes, jicama and red peppers">
         </picture></div>
-        <p class="g-caption"><strong>Crudit&eacute; platter</strong> — heirloom tomatoes, asparagus, and jicama, arranged to order.</p>
+        <p class="g-caption"><strong>Crudité platter</strong> — Heirloom tomatoes, asparagus, and jicama, arranged to order.</p>
       </div>
       <div class="g-item show" data-category="classes">
-        <div class="g-photo"><span class="g-icon">🥞</span><span class="g-hint">images/class-01.jpg</span></div>
-        <p class="g-caption"><strong>Crêpe-making class</strong> in progress.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/lessons/cooking-lessons-grape-leaves.webp" type="image/webp">
+          <img src="images/lessons/cooking-lessons-grape-leaves.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Blanched grape leaves laid out flat across a kitchen counter, ready for rolling">
+        </picture></div>
+        <p class="g-caption"><strong>Grape leaves, laid out</strong> — Blanched and set out flat, ready for rolling.</p>
       </div>
       <div class="g-item show" data-category="behind">
-        <div class="g-photo"><img src="images/behind-01.jpg" alt="Chef Essam Kabil focused while cooking a sauce on the stove"></div>
+        <div class="g-photo"><picture>
+          <source srcset="images/behind-01.webp" type="image/webp">
+          <img src="images/behind-01.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Chef Essam Kabil focused while finishing a sauce on the stove">
+        </picture></div>
         <p class="g-caption"><strong>Behind the pass</strong> — Essam finishing a sauce.</p>
       </div>
       <div class="g-item show" data-category="french">
-        <div class="g-photo"><span class="g-icon">🍷</span><span class="g-hint">images/french-02.jpg</span></div>
-        <p class="g-caption"><strong>Wine pairing</strong> — a skill from his French wine studies.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-pan-seared-chicken-breast.webp" type="image/webp">
+          <img src="images/dishes/dish-pan-seared-chicken-breast.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Sliced herb-crusted chicken breast fanned over roasted garlic mashed potatoes with asparagus and heirloom carrots in Dijon cream sauce">
+        </picture></div>
+        <p class="g-caption"><strong>Herb-crusted chicken breast</strong> — Sliced over roasted garlic mash, finished with Dijon cream.</p>
       </div>
       <div class="g-item show" data-category="mediterranean">
-        <div class="g-photo"><span class="g-icon">🐟</span><span class="g-hint">images/med-02.jpg</span></div>
-        <p class="g-caption"><strong>Grilled Mediterranean fish</strong>, herb-forward plating.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/catering/catering-mozzarela.webp" type="image/webp">
+          <img src="images/catering/catering-mozzarela.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Caprese platter of sliced tomatoes and fresh mozzarella drizzled with pesto and balsamic, finished with a basil crown">
+        </picture></div>
+        <p class="g-caption"><strong>Caprese platter</strong> — Pesto and aged balsamic, finished with a basil crown.</p>
+      </div>
+      <div class="g-item show" data-category="dinners">
+        <div class="g-photo"><picture>
+          <source srcset="images/private-chef/private-chef-ribeye-steak.webp" type="image/webp">
+          <img src="images/private-chef/private-chef-ribeye-steak.jpg" width="717" height="538" loading="lazy" decoding="async" alt="Grilled ribeye over mashed potatoes, topped with a roasted vegetable relish and pan sauce">
+        </picture></div>
+        <p class="g-caption"><strong>Grilled ribeye</strong> — Roasted vegetable relish and pan sauce over mashed potatoes.</p>
       </div>
       <div class="g-item show" data-category="events">
         <div class="g-photo"><picture>
           <source srcset="images/catering/catering-fruits.webp" type="image/webp">
           <img src="images/catering/catering-fruits.jpg" width="627" height="494" loading="lazy" decoding="async" alt="Fresh fruit platter with fanned watermelon, honeydew, cantaloupe, pineapple and strawberries">
         </picture></div>
-        <p class="g-caption"><strong>Seasonal fruit display</strong> — hand-cut melon, pineapple, and strawberries.</p>
+        <p class="g-caption"><strong>Seasonal fruit display</strong> — Hand-cut melon, pineapple, and strawberries.</p>
       </div>
       <div class="g-item show" data-category="classes">
-        <div class="g-photo"><span class="g-icon">🧂</span><span class="g-hint">images/class-02.jpg</span></div>
-        <p class="g-caption"><strong>Classic French mother sauces</strong> workshop.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/lessons/cooking-lessons-tempeh-meatballs.webp" type="image/webp">
+          <img src="images/lessons/cooking-lessons-tempeh-meatballs.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Chef Essam Kabil rolling tempeh meatballs by hand onto a lined baking tray">
+        </picture></div>
+        <p class="g-caption"><strong>Rolling tempeh meatballs</strong> — By hand, onto the tray, one at a time.</p>
       </div>
       <div class="g-item show" data-category="behind">
-        <div class="g-photo"><span class="g-icon">👨‍🍳</span><span class="g-hint">images/behind-02.jpg</span></div>
-        <p class="g-caption"><strong>Essam with guests</strong> after service.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/essam-portrait.webp" type="image/webp">
+          <img src="images/essam-portrait.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Chef Essam Kabil smiling while mincing garlic on a cutting board in a home kitchen">
+        </picture></div>
+        <p class="g-caption"><strong>Mise en place</strong> — Garlic, minced by hand before service.</p>
       </div>
       <div class="g-item show" data-category="french">
-        <div class="g-photo"><span class="g-icon">🍮</span><span class="g-hint">images/french-03.jpg</span></div>
-        <p class="g-caption"><strong>Tarte tatin</strong> — finished tableside.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-stuffed-flounder-with-garlic-shrimp.webp" type="image/webp">
+          <img src="images/dishes/dish-stuffed-flounder-with-garlic-shrimp.jpg" width="717" height="538" loading="lazy" decoding="async" alt="Stuffed flounder rolled and baked, served over mashed potatoes with green beans, peppers and squash in a dill cream sauce">
+        </picture></div>
+        <p class="g-caption"><strong>Stuffed flounder with garlic shrimp</strong> — Baked in white wine, with dill cream sauce.</p>
       </div>
       <div class="g-item show" data-category="mediterranean">
-        <div class="g-photo"><span class="g-icon">🥙</span><span class="g-hint">images/med-03.jpg</span></div>
-        <p class="g-caption"><strong>Egyptian-inspired mezze</strong> plate.</p>
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-classic-caprese-salad.webp" type="image/webp">
+          <img src="images/dishes/dish-classic-caprese-salad.jpg" width="540" height="540" loading="lazy" decoding="async" alt="Caprese salad of fresh mozzarella and heirloom cherry tomatoes over arugula, finished with basil pesto and balsamic">
+        </picture></div>
+        <p class="g-caption"><strong>Classic caprese</strong> — Heirloom tomatoes, fresh mozzarella, and hand-made pesto.</p>
+      </div>
+      <div class="g-item show" data-category="dinners">
+        <div class="g-photo"><picture>
+          <source srcset="images/private-chef/private-chef-crab-and-fish.webp" type="image/webp">
+          <img src="images/private-chef/private-chef-crab-and-fish.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Grilled fish and a crab cake stacked over polenta with blistered tomatoes, olives and fresh dill">
+        </picture></div>
+        <p class="g-caption"><strong>Grilled fish and crab cake</strong> — Stacked over polenta with blistered tomatoes and fresh dill.</p>
+      </div>
+      <div class="g-item show" data-category="events">
+        <div class="g-photo"><picture>
+          <source srcset="images/catering/catering-salad.webp" type="image/webp">
+          <img src="images/catering/catering-salad.jpg" width="750" height="1334" loading="lazy" decoding="async" alt="Rows of individually plated roasted beet and goat cheese salads prepared for event service">
+        </picture></div>
+        <p class="g-caption"><strong>Plated to order</strong> — Roasted beet and goat cheese salads lined up for service.</p>
+      </div>
+      <div class="g-item show" data-category="classes">
+        <div class="g-photo"><picture>
+          <source srcset="images/lessons/cooking-lessons-yellow-squash-cutting.webp" type="image/webp">
+          <img src="images/lessons/cooking-lessons-yellow-squash-cutting.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Close view of knife work, slicing yellow squash into even planks on a wooden board">
+        </picture></div>
+        <p class="g-caption"><strong>Knife work</strong> — Yellow squash cut down to even planks.</p>
+      </div>
+      <div class="g-item show" data-category="behind">
+        <div class="g-photo"><picture>
+          <source srcset="images/essam-home.webp" type="image/webp">
+          <img src="images/essam-home.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Chef Essam Kabil slicing red peppers on a wooden board in a home kitchen">
+        </picture></div>
+        <p class="g-caption"><strong>In the home kitchen</strong> — Peppers sliced down for the evening's service.</p>
+      </div>
+      <div class="g-item show" data-category="french">
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-grilled-swordfish.webp" type="image/webp">
+          <img src="images/dishes/dish-grilled-swordfish.jpg" width="717" height="538" loading="lazy" decoding="async" alt="Grilled swordfish steak over seasonal vegetables and potato puree in a cream sauce, finished with crisp fried leeks">
+        </picture></div>
+        <p class="g-caption"><strong>Grilled swordfish</strong> — Over seasonal vegetables and potato purée.</p>
+      </div>
+      <div class="g-item show" data-category="mediterranean">
+        <div class="g-photo"><picture>
+          <source srcset="images/meal-prep/meal-prep-middle-eastern.webp" type="image/webp">
+          <img src="images/meal-prep/meal-prep-middle-eastern.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="A Middle Eastern meal prep spread on a kitchen island: stuffed grape leaves, roasted vegetables, tabbouleh, hummus, labneh and a pot of lentil soup">
+        </picture></div>
+        <p class="g-caption"><strong>Middle Eastern meal prep</strong> — Stuffed grape leaves, tabbouleh, hummus, labneh, and lentil soup.</p>
+      </div>
+      <div class="g-item show" data-category="dinners">
+        <div class="g-photo"><picture>
+          <source srcset="images/private-chef/private-chef-pan-seared-grouper.webp" type="image/webp">
+          <img src="images/private-chef/private-chef-pan-seared-grouper.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Pan-seared grouper plated over potato puree with grilled vegetables, fresh berries and a berry cream sauce">
+        </picture></div>
+        <p class="g-caption"><strong>Pan-seared grouper</strong> — Potato purée and grilled vegetables, with a berry cream sauce.</p>
+      </div>
+      <div class="g-item show" data-category="events">
+        <div class="g-photo"><picture>
+          <source srcset="images/catering/catering-shrimp.webp" type="image/webp">
+          <img src="images/catering/catering-shrimp.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Tray of passed shrimp hors d'oeuvres on slaw with chipotle aioli and fresh cilantro">
+        </picture></div>
+        <p class="g-caption"><strong>Shrimp hors d'oeuvres</strong> — Chipotle aioli and cilantro, passed on trays.</p>
+      </div>
+      <div class="g-item show" data-category="classes">
+        <div class="g-photo"><picture>
+          <source srcset="images/lessons/cooking-lessons-potato-leek-soup-stirring.webp" type="image/webp">
+          <img src="images/lessons/cooking-lessons-potato-leek-soup-stirring.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="Chef Essam Kabil stirring a pot of potato leek soup on the stovetop">
+        </picture></div>
+        <p class="g-caption"><strong>Potato leek soup</strong> — Finished on the stovetop, tasted as it goes.</p>
+      </div>
+      <div class="g-item show" data-category="french">
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-pan-seared-grouper-with-shrimp.webp" type="image/webp">
+          <img src="images/dishes/dish-pan-seared-grouper-with-shrimp.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Pan-seared grouper topped with shrimp, olives, capers and tomato Nicoise salsa over mashed potatoes in lemon butter sauce">
+        </picture></div>
+        <p class="g-caption"><strong>Pan-seared grouper</strong> — Topped with shrimp and Niçoise salsa, on lemon butter sauce.</p>
+      </div>
+      <div class="g-item show" data-category="mediterranean">
+        <div class="g-photo"><picture>
+          <source srcset="images/meal-prep/meal-prep-vegan.webp" type="image/webp">
+          <img src="images/meal-prep/meal-prep-vegan.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="A vegan meal prep spread in glass containers: falafel, berry crumble, marinated vegetables, roasted potatoes with asparagus, and two soups">
+        </picture></div>
+        <p class="g-caption"><strong>Vegan meal prep</strong> — Falafel, marinated vegetables, and berry crumble, portioned for the week.</p>
+      </div>
+      <div class="g-item show" data-category="dinners">
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-fried-red-snapper.webp" type="image/webp">
+          <img src="images/dishes/dish-fried-red-snapper.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Whole fried red snapper plated with seasoned yellow rice, sauteed asparagus, squash and peppers, and jalapeno aioli in a ramekin">
+        </picture></div>
+        <p class="g-caption"><strong>Fried whole red snapper</strong> — Seasoned rice, sautéed vegetables, and jalapeño aioli.</p>
+      </div>
+      <div class="g-item show" data-category="events">
+        <div class="g-photo"><picture>
+          <source srcset="images/catering/catering-tacos.webp" type="image/webp">
+          <img src="images/catering/catering-tacos.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Buffet station of crisp rolled taquitos with salsa, guacamole and lime set up for a corporate event">
+        </picture></div>
+        <p class="g-caption"><strong>Taquito station</strong> — Salsa, guacamole, and lime, set up for a corporate event.</p>
+      </div>
+      <div class="g-item show" data-category="french">
+        <div class="g-photo"><picture>
+          <source srcset="images/dishes/dish-arugula-and-belgian-endive-salad.webp" type="image/webp">
+          <img src="images/dishes/dish-arugula-and-belgian-endive-salad.jpg" width="960" height="540" loading="lazy" decoding="async" alt="Belgian endive spears fanned around baby arugula with goat cheese, walnuts, dried cranberries and cherry tomatoes">
+        </picture></div>
+        <p class="g-caption"><strong>Arugula and Belgian endive salad</strong> — Goat cheese, walnuts, and cherry tomato, vinaigrette on the side.</p>
       </div>
     </div>
-
-    <p class="center" style="margin-top:36px; font-size:0.85rem; color:var(--charcoal-soft);">
-      Each placeholder above marks exactly where a photo will go — see the <code>images/</code> folder and README for how to swap them in.
-    </p>
   </div>
 </section>
 
@@ -118,54 +254,44 @@
   <div class="container">
     <div class="center" style="max-width:600px; margin:0 auto 40px;">
       <span class="eyebrow">Follow Along</span>
-      <h2>Latest from Instagram</h2>
-      <p>A live feed of Essam's most recent posts — plugged in once his Instagram handle is connected below.</p>
+      <h2>Photos, updates, and moments from the kitchen</h2>
+      <p>Follow Chef Essam for new dishes, event nights, and behind-the-scenes moments as they happen.</p>
     </div>
 
     <!--
-      INSTAGRAM FEED — placeholder grid.
-      To show real, live Instagram posts here, the simplest no-code option is
-      a free embed widget (since Instagram's own API requires a developer app):
-        1. Sign up at https://snapwidget.com or https://elfsight.com (both have free tiers)
+      INSTAGRAM — the card below links to Essam's profile.
+      IMPORTANT: the href still points at REPLACE_WITH_HANDLE and must be updated
+      once the account exists (also update the Instagram link in the footer).
+
+      To show a live grid of recent posts here instead of / alongside the card,
+      the simplest no-code option is a free embed widget (Instagram's own API
+      requires a developer app):
+        1. Sign up at https://snapwidget.com or https://elfsight.com (free tiers)
         2. Connect Essam's Instagram account and choose a grid layout
-        3. Paste the <iframe> or <script> snippet they give you in place of
-           the six placeholder tiles below
+        3. Paste the <iframe> or <script> snippet they provide inside a
+           <div class="ig-grid"> ... </div> block in this section
       See README.md for the full walkthrough.
     -->
-    <div class="masonry ig-grid">
-      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
-      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
-      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
-      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
-      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
-      <div class="g-item show" data-category="all"><div class="g-photo" style="aspect-ratio:1/1;"><span class="g-icon">📷</span><span class="g-hint">IG post</span></div></div>
-    </div>
-    <p class="center mt-lg">
-      <a href="https://www.instagram.com/REPLACE_WITH_HANDLE" target="_blank" rel="noopener" class="btn btn-outline on-light">View More on Instagram</a>
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="center" style="max-width:600px; margin:0 auto 40px;">
-      <span class="eyebrow">Follow Along</span>
-      <h2>Find Essam on Facebook</h2>
-      <p>Follow along for photos, updates, and behind-the-scenes moments from Chef Essam Kabil.</p>
-    </div>
-
-    <div class="social-card">
-      <div class="social-card-icon">📘</div>
-      <div class="social-card-title">Essam Kabil</div>
-      <p class="social-card-desc">Catering, private chef bookings, cooking lessons, and everyday moments in the kitchen.</p>
-      <a href="https://www.facebook.com/profile.php?id=100069899911060" target="_blank" rel="noopener" class="btn btn-primary">Follow on Facebook</a>
+    <div class="social-cards">
+      <div class="social-card">
+        <div class="social-card-icon">📷</div>
+        <div class="social-card-title">Essam Kabil</div>
+        <p class="social-card-desc">New dishes, plating, and moments from the pass — posted as they happen.</p>
+        <a href="https://www.instagram.com/REPLACE_WITH_HANDLE" target="_blank" rel="noopener" class="btn btn-primary">Follow on Instagram</a>
+      </div>
+      <div class="social-card">
+        <div class="social-card-icon">📘</div>
+        <div class="social-card-title">Essam Kabil</div>
+        <p class="social-card-desc">Catering, private chef bookings, cooking lessons, and everyday moments in the kitchen.</p>
+        <a href="https://www.facebook.com/profile.php?id=100069899911060" target="_blank" rel="noopener" class="btn btn-primary">Follow on Facebook</a>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="cta-banner">
   <div class="container">
-    <h2>Like what you see in your mind's eye already?</h2>
+    <h2>Like what you see?</h2>
     <p>Let's put it on your table.</p>
     <a href="contact.html" class="btn btn-outline on-light" style="background:var(--charcoal); color:var(--ivory); border-color:var(--charcoal);">Book Chef Essam</a>
   </div>

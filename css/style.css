@@ -630,6 +630,20 @@ html, body {
   text-align: center;
   background: var(--cream);
 }
+/* Two social cards side by side (Gallery "Follow Along"). */
+.social-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.social-cards .social-card { max-width: none; margin: 0; display: flex; flex-direction: column; }
+.social-cards .social-card .btn { margin-top: auto; align-self: center; }
+@media (max-width: 720px) {
+  .social-cards { grid-template-columns: 1fr; max-width: 420px; }
+}
 .social-card-icon { font-size: 2.6rem; margin-bottom: 14px; }
 .social-card-title {
   font-family: var(--font-display);
@@ -748,15 +762,27 @@ html, body {
 .filter-tab:hover { background: rgba(184,146,90,0.12); }
 .filter-tab.active { background: var(--bordeaux); border-color: var(--bordeaux); color: var(--ivory); }
 
+/* Gallery: true masonry. The photo library mixes 16:9, 4:3, 1:1 and 3:4 sources,
+   so a uniform grid would crop up to 55% off the landscape shots. Columns let
+   each tile keep its own height and every photo shows in full. */
 .masonry {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  column-count: 4;
+  column-gap: 18px;
 }
+.masonry .g-item { break-inside: avoid; margin: 0 0 18px; width: 100%; }
+.masonry .g-photo { aspect-ratio: auto; }
+.masonry .g-photo picture,
+.masonry .g-photo img { height: auto; display: block; width: 100%; }
+@media (max-width: 1000px) { .masonry { column-count: 3; } }
+/* Stay at 2 columns on phones — a single column stacks 28 photos into a
+   ~14,000px page (16 screens of scrolling). */
+@media (max-width: 720px)  { .masonry { column-count: 2; column-gap: 12px; } }
+@media (max-width: 720px)  { .masonry .g-item { margin-bottom: 12px; } }
 @media (max-width: 900px) { .masonry { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .masonry { grid-template-columns: 1fr; } }
 
-.ig-grid { grid-template-columns: repeat(6, 1fr); }
+/* Instagram feed grid — standalone (does not rely on .masonry, which is column-based). */
+.ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; column-count: initial; }
 @media (max-width: 900px) { .ig-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { .ig-grid { grid-template-columns: repeat(2, 1fr); } }
 
