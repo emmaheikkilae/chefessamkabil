@@ -779,6 +779,13 @@ html, body {
   padding: 16px;
   overflow: hidden;
 }
+/* Menus: dish photos are landscape/square sources, so the 4:5 portrait frame
+   used elsewhere would crop up to 55% of them away. Let each photo keep its
+   own aspect ratio -- nothing is cropped and every dish shows in full. */
+.dish-block .g-photo { aspect-ratio: auto; align-self: start; }
+.dish-block .g-photo picture,
+.dish-block .g-photo img { height: auto; display: block; width: 100%; }
+
 .g-photo picture { display: block; width: 100%; height: 100%; }
 .g-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
 /* When a real photo is present, drop the dashed placeholder chrome so the
@@ -786,6 +793,14 @@ html, body {
 .g-photo:has(img) { padding: 0; border: none; background: none; }
 .g-photo .g-icon { font-size: 1.6rem; }
 .g-photo .g-hint { font-size: 0.72rem; color: var(--charcoal-soft); letter-spacing: 0.02em; }
+/* Dish photos on the Menus page are landscape or square, not portrait. The 4:5
+   frame was cropping away up to 55% of each plate, so once a real photo is
+   present let it keep its own aspect ratio. Placeholders (no <img>) still get
+   the 4:5 frame, so the unfilled Menu Two slots are unaffected. */
+.dish-block .g-photo:has(img) { aspect-ratio: auto; align-self: start; }
+.dish-block .g-photo:has(img) picture { height: auto; }
+.dish-block .g-photo:has(img) img { height: auto; object-fit: contain; }
+
 .g-caption { margin-top: 10px; font-size: 0.85rem; color: var(--charcoal-soft); }
 .g-caption strong { color: var(--charcoal); }
 
