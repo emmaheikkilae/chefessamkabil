@@ -195,14 +195,31 @@
             </select>
             <p class="field-hint">If you shop, you pay the service fee only. If Essam shops, the ingredient cost and a shopping fee are added on top of the service fee.</p>
           </div>
-          <div class="field full" id="mealprep-wrap" style="display:none;">
-            <label>Meal Prep Location &amp; Containers</label>
-            <select name="mealprep_option">
+          <div class="field full" id="prep-location-wrap" style="display:none;">
+            <label>Where Should the Food Be Prepared?</label>
+            <select name="prep_location" id="prep-location-select">
               <option value="">Select one</option>
-              <option value="customer-home-own-containers">At my home — I'll provide the containers</option>
-              <option value="customer-home-essam-trays">At my home — Essam will bring aluminum trays</option>
-              <option value="essam-kitchen-delivered">At Essam's kitchen — delivered to me in aluminum trays</option>
+              <option value="my-location">At my home or venue</option>
+              <option value="essam-kitchen">At Essam's kitchen</option>
             </select>
+          </div>
+          <div class="field full" id="handoff-wrap" style="display:none;">
+            <label>How Should the Food Get to You?</label>
+            <select name="food_handoff" id="handoff-select">
+              <option value="">Select one</option>
+              <option value="pickup">I'll pick it up from Essam</option>
+              <option value="delivery">Essam delivers it to me</option>
+            </select>
+            <p class="field-hint">Delivery is available for an additional charge, based on distance.</p>
+          </div>
+          <div class="field full" id="serving-ware-wrap" style="display:none;">
+            <label>Containers, Trays &amp; Serving Ware</label>
+            <select name="serving_ware" id="serving-ware-select">
+              <option value="">Select one</option>
+              <option value="customer">I'll provide my own</option>
+              <option value="essam">Essam provides them</option>
+            </select>
+            <p class="field-hint">Covers trays, containers, serving plates, boards, and similar. If Essam supplies them, the cost is added to your quote.</p>
           </div>
           <div class="field full">
             <label>Budget Range <span class="optional">(optional)</span></label>

@@ -47,16 +47,44 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Show the relevant follow-up question based on which service is selected:
-  // Every service involves food, so the ingredients question applies to all of
-  // them; Multi-Day Meal Prep additionally asks about location/containers.
+  // Ingredients applies to every service. Preparation location, hand-off and
+  // serving ware only apply where food is produced and then handed over --
+  // Catering and Multi-Day Meal Prep. (Cooking Lessons and Private Chef are
+  // in-home by definition, so there is nothing to collect or deliver.)
+  // The hand-off question only makes sense if Essam's kitchen is cooking.
   var serviceSelect = document.getElementById("service-select");
   var ingredientsWrap = document.getElementById("ingredients-wrap");
-  var mealprepWrap = document.getElementById("mealprep-wrap");
-  if (serviceSelect && ingredientsWrap && mealprepWrap) {
-    serviceSelect.addEventListener("change", function () {
-      ingredientsWrap.style.display = serviceSelect.value ? "block" : "none";
-      mealprepWrap.style.display = serviceSelect.value === "meal-prep" ? "block" : "none";
-    });
+  var prepLocationWrap = document.getElementById("prep-location-wrap");
+  var prepLocationSelect = document.getElementById("prep-location-select");
+  var handoffWrap = document.getElementById("handoff-wrap");
+  var servingWareWrap = document.getElementById("serving-ware-wrap");
+
+  // Hiding a wrapper must also reset its control. A display:none select still
+  // submits whatever was selected before it was hidden, which would send Essam
+  // contradictory answers (e.g. "Essam delivers" on a job cooked at your home).
+  function setFieldVisible(wrap, visible) {
+    if (!wrap) return;
+    wrap.style.display = visible ? "block" : "none";
+    if (!visible) {
+      wrap.querySelectorAll("select, input, textarea").forEach(function (el) {
+        el.value = "";
+      });
+    }
+  }
+
+  function syncBookingFields() {
+    var svc = serviceSelect.value;
+    var handsOverFood = svc === "catering" || svc === "meal-prep";
+    setFieldVisible(ingredientsWrap, !!svc);
+    setFieldVisible(prepLocationWrap, handsOverFood);
+    setFieldVisible(servingWareWrap, handsOverFood);
+    // read prep location AFTER the line above, which may have just cleared it
+    setFieldVisible(handoffWrap, handsOverFood && prepLocationSelect.value === "essam-kitchen");
+  }
+
+  if (serviceSelect && ingredientsWrap && prepLocationWrap && handoffWrap && servingWareWrap) {
+    serviceSelect.addEventListener("change", syncBookingFields);
+    prepLocationSelect.addEventListener("change", syncBookingFields);
   }
 
   // Submit forms to Netlify Forms via AJAX, so we can show an in-page
