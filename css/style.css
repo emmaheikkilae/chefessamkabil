@@ -813,6 +813,9 @@ html, body {
   transition: transform 0.4s ease;
 }
 .cm-tile:hover img { transform: scale(1.04); }
+/* Two-photo variant: taller tiles. The meal-prep sources are 3:4, so matching
+   that ratio crops nothing and gives the pair more height beside the text. */
+.photo-mosaic--pair .cm-tile { aspect-ratio: 3 / 4; }
 @media (prefers-reduced-motion: reduce) {
   .cm-tile img { transition: none; }
   .cm-tile:hover img { transform: none; }
