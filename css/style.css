@@ -790,9 +790,9 @@ html, body {
 .g-caption strong { color: var(--charcoal); }
 
 /* ============================================
-   Catering mosaic (Services page)
+   Photo mosaic (Services page — Catering, Cooking Lessons)
    ============================================ */
-.catering-mosaic {
+.photo-mosaic {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
