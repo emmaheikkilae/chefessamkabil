@@ -47,13 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Show the relevant follow-up question based on which service is selected:
-  // Private Chef -> who provides ingredients; Multi-Day Meal Prep -> location/containers
+  // Every service involves food, so the ingredients question applies to all of
+  // them; Multi-Day Meal Prep additionally asks about location/containers.
   var serviceSelect = document.getElementById("service-select");
   var ingredientsWrap = document.getElementById("ingredients-wrap");
   var mealprepWrap = document.getElementById("mealprep-wrap");
   if (serviceSelect && ingredientsWrap && mealprepWrap) {
     serviceSelect.addEventListener("change", function () {
-      ingredientsWrap.style.display = serviceSelect.value === "private-chef" ? "block" : "none";
+      ingredientsWrap.style.display = serviceSelect.value ? "block" : "none";
       mealprepWrap.style.display = serviceSelect.value === "meal-prep" ? "block" : "none";
     });
   }
