@@ -111,7 +111,7 @@
   </div>
 </section>
 
-<section class="section section--ivory">
+<section class="section section--ivory" id="home-testimonials-section">
   <div class="container">
     <div class="center" style="max-width:640px; margin:0 auto 48px;">
       <span class="eyebrow">What Clients Say</span>
@@ -167,6 +167,7 @@
 <script>
   mountTestimonials({
     gridEl: document.getElementById("home-testimonial-grid"),
+    hideEl: document.getElementById("home-testimonials-section"),
     onHomeOnly: true,
     limit: 3
   });

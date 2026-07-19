@@ -387,6 +387,26 @@ html, body {
 }
 .t-featured .t-meta { color: var(--brass-light); }
 
+.t-empty {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.t-empty h3 {
+  font-family: var(--font-display);
+  color: var(--bordeaux);
+  margin: 0 0 0.4em;
+}
+.t-empty p {
+  color: var(--charcoal-soft);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
 /* ============================================
    Timeline (About page)
    ============================================ */

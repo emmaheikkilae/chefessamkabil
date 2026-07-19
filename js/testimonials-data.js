@@ -15,43 +15,25 @@
 //   showOnHome  - set true to include it in the 3-card preview on the
 //                 Home page (only the first 3 marked true will show there)
 // ============================================================
+// No testimonials are published yet — real client reviews will be added here
+// as they come in (the submission form on testimonials.html feeds this).
+//
+// To add a review, copy the template below into the array, fill it in, and
+// remove the leading "//" from each line. The Home page and Testimonials
+// page will pick it up automatically, and the "no reviews yet" placeholder
+// will disappear on its own once at least one entry is present.
+//
+//   {
+//     id: "t1",
+//     stars: 5,                     // 1 to 5
+//     quote: "Their words here.",   // no quotation marks needed — added automatically
+//     name: "First name L.",
+//     eventType: "Private Chef",    // Catering / Cooking Lesson / Private Chef / Multi-Day Meal Prep
+//     featured: true,               // set true on exactly ONE entry for the top highlight box
+//     showOnHome: true              // set true to include in the 3-card Home page preview
+//   },
 window.TESTIMONIALS = [
-  {
-    id: "t1",
-    stars: 5,
-    quote: "Chef Essam did our anniversary dinner at home and it was better than any restaurant we've been to. The French sauces alone were worth it.",
-    name: "Marie T.",
-    eventType: "Private Dinner",
-    featured: true,
-    showOnHome: true
-  },
-  {
-    id: "t2",
-    stars: 5,
-    quote: "We booked him for a cooking class with six friends and it turned into the best girls' night we've had in years. He made crêpe-making feel effortless.",
-    name: "Danielle R.",
-    eventType: "Cooking Lesson",
-    featured: false,
-    showOnHome: true
-  },
-  {
-    id: "t3",
-    stars: 5,
-    quote: "Corporate holiday party, 40 guests, dietary needs all over the map — he handled it without a single complaint. Professional and warm.",
-    name: "James K.",
-    eventType: "Catering",
-    featured: false,
-    showOnHome: true
-  },
-  {
-    id: "t4",
-    stars: 5,
-    quote: "A private chef who actually listens to what you want. Our weekly dinners have never been better.",
-    name: "Sophia L.",
-    eventType: "Private Chef",
-    featured: false,
-    showOnHome: false
-  }
+  // (empty for now — add approved client reviews using the template above)
 ];
 
 function starString(n) {
@@ -85,9 +67,23 @@ function renderFeaturedTestimonial(t) {
 //   excludeFeatured - if true, the featured one is left out of the grid
 //   onHomeOnly      - if true, only entries with showOnHome:true are used
 //   limit           - max number of cards to show in the grid
+//   emptyHTML       - markup to show on the Testimonials page when there are
+//                     no reviews yet (rendered into featuredEl, or gridEl)
+//   hideEl          - element to hide entirely when there are no reviews yet
+//                     (used on the Home page to drop the whole preview section)
 function mountTestimonials(options) {
   options = options || {};
   var data = window.TESTIMONIALS || [];
+
+  // Nothing published yet — degrade gracefully instead of leaving blank gaps.
+  if (data.length === 0) {
+    if (options.hideEl) { options.hideEl.style.display = "none"; return; }
+    if (options.emptyHTML) {
+      var target = options.featuredEl || options.gridEl;
+      if (target) target.innerHTML = options.emptyHTML;
+      return;
+    }
+  }
 
   if (options.featuredEl) {
     var featured = data.filter(function (t) { return t.featured; })[0];

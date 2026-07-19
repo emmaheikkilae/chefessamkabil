@@ -145,7 +145,12 @@
   mountTestimonials({
     featuredEl: document.getElementById("featured-testimonial"),
     gridEl: document.getElementById("testimonial-grid"),
-    excludeFeatured: true
+    excludeFeatured: true,
+    emptyHTML:
+      '<div class="t-empty">' +
+        '<h3>The first reviews are on their way</h3>' +
+        '<p>Chef Essam is now booking private clients across Jacksonville and Northeast Florida. If you\u2019ve cooked with him, you could be among the first to share your experience \u2014 use the form below.</p>' +
+      '</div>'
   });
 </script>
 <script src="js/main.js"></script>
